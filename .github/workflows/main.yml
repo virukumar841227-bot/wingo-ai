@@ -1,0 +1,23 @@
+name: Wingo-Auto-Predict
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Har minute apne aap chalega
+  workflow_dispatch:       # Manual button ke liye
+
+jobs:
+  run-ai:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Requests
+        run: pip install requests
+
+      - name: Execute Predictor
+        run: python predictor.py
