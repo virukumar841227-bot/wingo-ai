@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 # Configuration
-API_URL = "https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json"
+API_URL = "https://draw.ar-lottery01.com/WinGo/WinGo_1M.json?ts=1770578406476"
 
 def analyze():
     print(f"🚀 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Starting Analysis...")
